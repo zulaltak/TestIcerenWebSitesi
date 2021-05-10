@@ -1,0 +1,400 @@
+/* Google Fonts'dan, Font kullanmak icin import ettim. */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #ad63aa;
+}
+
+::selection {
+    color: #fff;
+    background: #ad63aa;
+}
+
+.basla_btn,
+.bilgi_kart,
+.soru_karti,
+.sonuc_karti {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bilgi_kart.aktifBilgi,
+.soru_karti.aktifTest,
+.sonuc_karti.aktifSonuc {
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.basla_btn button {
+    font-size: 25px;
+    font-weight: 500;
+    color: #ad63aa;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.bilgi_kart {
+    width: 540px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.bilgi_kart .bilgi-baslik {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.bilgi_kart .bilgi-liste {
+    padding: 15px 30px;
+}
+
+.bilgi_kart .bilgi-liste .bilgi {
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.bilgi_kart .bilgi-liste .bilgi span {
+    font-weight: 600;
+    color: #ad63aa;
+}
+
+.bilgi_kart .butonlar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    border-top: 1px solid lightgrey;
+}
+
+.bilgi_kart .butonlar button {
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid#e080dc;
+    transition: all 0.3s ease;
+}
+
+.soru_karti {
+    width: 550px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.soru_karti header {
+    position: relative;
+    z-index: 2;
+    height: 70px;
+    padding: 0 30px;
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.soru_karti header .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.soru_karti header .sure {
+    color: #ab61a7;
+    background: #cce5ff;
+    border: 1px solid #fc90f7;
+    height: 45px;
+    padding: 0 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+}
+
+.soru_karti header .sure .time_left_txt {
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+
+.soru_karti header .sure .sure_sn {
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: #343a40;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+
+.soru_karti header .sure_don {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background: #ad63aa;
+}
+
+section {
+    padding: 25px 30px 20px 30px;
+    background: #fff;
+}
+
+section .soru_metin {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+section .sec_list {
+    padding: 20px 0px;
+    display: block;
+}
+
+section .sec_list .option {
+    background: aliceblue;
+    border: 1px solid #84c5fe;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .sec_list .option:last-child {
+    margin-bottom: 0px;
+}
+
+section .sec_list .option:hover {
+    color: #ab61a7;
+    background: #cce5ff;
+    border: 1px solid #fc90f7;
+}
+
+section .sec_list .option.correct {
+    color: #155724;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+section .sec_list .option.incorrect {
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+section .sec_list .option.disabled {
+    pointer-events: none;
+}
+
+section .sec_list .option .icon {
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    line-height: 24px;
+}
+
+.sec_list .option .icon.tick {
+    color: #23903c;
+    border-color: #23903c;
+    background: #d4edda;
+}
+
+.sec_list .option .icon.cross {
+    color: #a42834;
+    background: #f8d7da;
+    border-color: #a42834;
+}
+
+footer {
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgrey;
+}
+
+footer .top_soru span {
+    display: flex;
+    user-select: none;
+}
+
+footer .top_soru span p {
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+footer .top_soru span p:first-child {
+    padding-left: 0px;
+}
+
+footer button {
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    background: #ad63aa;
+    border: 1px solid#e080dc;
+    line-height: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+
+footer button:hover {
+    background: #0263ca;
+}
+
+footer button.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.sonuc_karti {
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    padding: 25px 30px;
+    width: 450px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.sonuc_karti .icon {
+    font-size: 100px;
+    color: #ad63aa;
+    margin-bottom: 10px;
+}
+
+.sonuc_karti .test_bitis {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sonuc_karti .puan span {
+    display: flex;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.sonuc_karti .puan span p {
+    padding: 0 4px;
+    font-weight: 600;
+}
+
+.sonuc_karti .butonlar {
+    display: flex;
+    margin: 20px 0;
+}
+
+.sonuc_karti .butonlar button {
+    margin: 0 10px;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid#e080dc;
+    transition: all 0.3s ease;
+}
+
+.butonlar button.bastan {
+    color: #fff;
+    background: #ad63aa;
+}
+
+.butonlar button.bastan:hover {
+    background: #0263ca;
+}
+
+.butonlar button.quit {
+    color: #ad63aa;
+    background: #fff;
+}
+
+.butonlar button.quit:hover {
+    color: #fff;
+    background: #ad63aa;
+}
+
+.alt {
+    background: #555;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.alt a {
+    color: #fff;
+}
+
+.temizle {
+    clear: both;
+}

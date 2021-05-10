@@ -1,0 +1,21 @@
+/* Google Fonts'dan, Font kullanmak icin import ettim. */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #ad63aa;
+}
+
+p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20;
+    height: 20;
+}
